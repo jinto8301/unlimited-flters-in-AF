@@ -968,9 +968,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             return
 
         if set_type == "delete":
-            time = int(time) + 30
-            await sett_db.update_settings(grp_id, set_type, True if (0 < int(time) <= 180) else False,
-                                          time if (0 < int(time) <= 180) else 0)
+            time = int(time) + 120
+            await sett_db.update_settings(grp_id, set_type, True if (0 < int(time) <= 900) else False,
+                                          time if (0 < int(time) <= 900) else 0)
         else:
             await sett_db.update_settings(grp_id, set_type, False if status == "True" else True, 0)
 
