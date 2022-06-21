@@ -714,6 +714,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "pages":
         await query.answer()
+        
+        
     elif query.data == "start":
         buttons = [
             [
@@ -731,6 +733,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [
+            [
+                InlineKeyboardButton('📍Features📍', callback_data='tools')
+            ],
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
             ],
@@ -763,14 +768,27 @@ async def cb_handler(client: Client, query: CallbackQuery):
         #     text=script.HELP_TXT.format(query.from_user.mention),
         #     reply_markup=reply_markup
         # )
-
+        
+    elif query.data == "tools":
+        buttons = [
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HLP_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup
+        )
+        
     elif query.data == "about":
         buttons = [
             [
-                InlineKeyboardButton('JNS MOVIES', url='https://t.me/JNS_MOVIES')
+                InlineKeyboardButton('🏷JNS MOVIES🏷', url='https://t.me/JNS_MOVIES')
             ],
             [
-                InlineKeyboardButton('JNS BOTS', url='https://t.me/JNS_BOTS')
+                InlineKeyboardButton('❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥', url='https://t.me/JNS_BOTS')
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
