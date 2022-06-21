@@ -534,7 +534,6 @@ async def settings(client, message):
         if not userid:
             return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
         chat_type = message.chat.type
-        args = message.text.html.split(None, 1)
 
         if chat_type == enums.ChatType.PRIVATE:
             grpid = await active_connection(str(userid))
@@ -565,7 +564,7 @@ async def settings(client, message):
         ):
             return
 
-        if  await sett_db.is_settings_exist(str(grp_id)):
+        if not await sett_db.is_settings_exist(str(grp_id)):
             await sett_db.add_settings(str(grp_id), True, 120)
 
         settings = await sett_db.get_settings(str(grp_id))
