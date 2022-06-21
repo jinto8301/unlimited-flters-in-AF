@@ -12,7 +12,7 @@ i'm simple manual filter bot with some Features 🤩
 ✯ DATABASE: AWS ⛓
 ✯ BOT SERVER: AWS 📡
 """
-    HLP_TXT = """
+    EXTRAMOD_TXT = """
  /settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
 /connect - Connect with group to manage group
 /disconnect - To disconnect groups
@@ -143,7 +143,7 @@ All commands can be used with the following: /
 • /connect  - <code>connect a particular chat to your PM</code>
 • /disconnect  - <code>disconnect from a chat</code>
 • /connections - <code>list all your connections</code>"""
-    EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
+    EXTRAMOD_TXT1 = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
 these are the extra features of Eva Maria
