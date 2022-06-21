@@ -565,7 +565,7 @@ async def settings(client, message):
         ):
             return
 
-        if not await sett_db.is_settings_exist(str(grp_id)):
+        if  await sett_db.is_settings_exist(str(grp_id)):
             await sett_db.add_settings(str(grp_id), True, 120)
 
         settings = await sett_db.get_settings(str(grp_id))
