@@ -106,8 +106,6 @@ async def give_filter(client, message):
             #     except Exception as e:
             #         logger.exception(e)
             #     break
-    else:
-        await auto_filter(client, message)
 
 
 @Client.on_edited_message(filters.group & filters.text & filters.incoming)    # & filters.edited
@@ -172,8 +170,6 @@ async def give_filter_edited(client, message):
             #     except Exception as e:
             #         logger.exception(e)
             #     break
-    else:
-        await auto_filter(client, message)
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
