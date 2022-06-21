@@ -742,25 +742,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode="html",
             reply_markup=keyboard)
 
-        # buttons = [
-        #     [
-        #         InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-        #         InlineKeyboardButton('Auto Filter', callback_data='autofilter')
-        #     ],
-        #     [
-        #         InlineKeyboardButton('Connection', callback_data='coct'),
-        #         InlineKeyboardButton('Extra Mods', callback_data='extra')
-        #     ],
-        #     [
-        #         InlineKeyboardButton('🏠 Home', callback_data='start'),
-        #         InlineKeyboardButton('🔮 Status', callback_data='stats')
-        #     ]
-        # ]
-        # reply_markup = InlineKeyboardMarkup(buttons)
-        # await query.message.edit_text(
-        #     text=script.HELP_TXT.format(query.from_user.mention),
-        #     reply_markup=reply_markup
-        # )
+        buttons = [
+             [
+                 InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
+                 InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+             ],
+             [
+                 InlineKeyboardButton('Connection', callback_data='coct'),
+                 InlineKeyboardButton('Extra Mods', callback_data='extra')
+             ],
+             [
+                 InlineKeyboardButton('🏠 Home', callback_data='start'),
+                 InlineKeyboardButton('🔮 Status', callback_data='stats')
+             ]
+         ]
+         reply_markup = InlineKeyboardMarkup(buttons)
+         await query.message.edit_text(
+             text=script.HELP_TXT.format(query.from_user.mention),
+             reply_markup=reply_markup
+         )
     elif query.data == "about":
         buttons = [
             [
