@@ -25,7 +25,7 @@ async def ping(bot, message):
 @Client.on_message(filters.private & filters.command(["getsticker"]))
 async def getstickerasfile(bot, message):
     tx = await message.reply_text("Checking Sticker")
-    await tx.edit("Validating sticker..")
+    td = await tx.edit("Validating sticker..")
     if message.reply_to_message.sticker is False:
         await tx.edit("Not a Sticker File!!")
     else:
@@ -41,11 +41,12 @@ async def getstickerasfile(bot, message):
                     #   zip_path= ZipFile.write("")
                     await tx.edit("Uploading...")
                     start = time.time()
-                    powered_by = "<b>[<a href='https://t.me/UFSBotz'>©𝙐𝙁𝙎 𝘽𝙤𝙩𝙯</a>]</b>"
+                    powered_by = "<b>[<a href='https://t.me/JNS_BOTS'>TEAM JNS</a>]</b>"
                     await message.reply_document(
                         document=file_path,
                         caption=f"💫 ℙ𝕠𝕨𝕖𝕣𝕖𝕕 𝔹𝕪 : {powered_by}")
                     await tx.delete()
+                    await td.delete()
                     os.remove(file_path)
                 #   os.remove(zip_path)
                 except Exception as error:
@@ -59,7 +60,7 @@ async def getstickerasfile(bot, message):
                     await tx.edit("Downloaded")
                     await tx.edit("Uploading...")
                     start = time.time()
-                    powered_by = "<b>[<a href='https://t.me/UFSBotz'>©𝙐𝙁𝙎 𝘽𝙤𝙩𝙯</a>]</b>"
+                    powered_by = "<b>[<a href='https://t.me/JNS_BOTS'>TEAM JNS</a>]</b>"
                     await message.reply_document(
                         document=file_path,
                         caption=f"💫 ℙ𝕠𝕨𝕖𝕣𝕖𝕕 𝔹𝕪 : {powered_by}")
