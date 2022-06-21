@@ -35,19 +35,19 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-             fmsg == await message.reply_sticker(
-            'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
-            reply_markup=InlineKeyboardMarkup(
-                [
-                [
-                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help1')
-                ],
-                [
-                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about1'),
-                    InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
-                ]]
-               )
-            )
+            fmsg == await message.reply_sticker(
+                'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                    [
+                        InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help1')
+                    ],
+                    [
+                        InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about1'),
+                        InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
+                    ]]
+                    )
+                )
             await asyncio.sleep(30)
             await fmsg.delete()
             await message.delete()
