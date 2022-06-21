@@ -717,7 +717,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [
             [
-                InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
             ],
             [
@@ -727,7 +726,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.START_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
     elif query.data == "help":
@@ -742,7 +741,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
                    # buttons = [
@@ -780,7 +779,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+            text=script.ABOUT_JNS_TXT.format(temp.B_NAME),
             reply_markup=reply_markup
         )
     elif query.data == "source":
