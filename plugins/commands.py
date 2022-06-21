@@ -35,7 +35,6 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-         if message.from_user.id not in ADMINS:
         fmsg1 = await message.reply_sticker(
             'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
             reply_markup=InlineKeyboardMarkup(
@@ -51,9 +50,6 @@ async def start(client, message):
                 ]]
             )
         )
-        await asyncio.sleep(20)
-        await fmsg1.delete()
-        await message.delete()
         if message.from_user.id in ADMINS:
             buttons = [
                 [
@@ -70,6 +66,7 @@ async def start(client, message):
                                         temp.B_NAME), reply_markup=reply_markup)
             await asyncio.sleep(20)
             await fmsg.delete()
+            await fmsg1.delete()
             await message.delete()
             
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
