@@ -36,7 +36,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
         fmsg = await message.reply_sticker(
-            'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
+            'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
             reply_markup=InlineKeyboardMarkup(
                 [[
                     InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -50,20 +50,6 @@ async def start(client, message):
                 ]]
             )
         )
-        if message.from_user.id in ADMINS:
-            buttons = [
-                [
-                    InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-                ],
-                [
-                    InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-                ]
-            ]
-            reply_markup = InlineKeyboardMarkup(buttons)
-            fmsg = await message.reply(
-                script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
-                                        temp.U_NAME,
-                                        temp.B_NAME), reply_markup=reply_markup)
 
             await asyncio.sleep(20)
             await fmsg.delete()
