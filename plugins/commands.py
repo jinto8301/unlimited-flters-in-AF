@@ -35,39 +35,21 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-        if message.from_user.id in ADMINS:
-        fmsg1 = await message.reply_sticker(
-            'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
-            reply_markup=InlineKeyboardMarkup(
-                [
-                [
-                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
-                ],
-                [
-                    InlineKeyboardButton('🎈JNS TEAM🎈', callback_data='about')
-                ],
-                [
-                    InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
-                ]]
-            )
-        )
-
             buttons = [
                 [
-                    InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+                    InlineKeyboardButton('🤖 Updates', url='https://t.me/JNS_BOTS')
                 ],
                 [
                     InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
                 ]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
-            fmsg = await message.reply(
+            await message.reply(
                 script.START_JNS_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
                                         temp.U_NAME,
                                         temp.B_NAME), reply_markup=reply_markup)
-            await asyncio.sleep(20)
+            await asyncio.sleep(30)
             await fmsg.delete()
-            await fmsg1.delete()
             await message.delete()
             
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
