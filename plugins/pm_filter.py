@@ -731,6 +731,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.START_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
+    elif query.data == "tools":
+        buttons = [
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HLP_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        )        
     elif query.data == "help":
         buttons = [
             [
@@ -769,18 +781,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         #     reply_markup=reply_markup
         # )
         
-    elif query.data == "tools":
-        buttons = [
-            [
-                InlineKeyboardButton('🏠 Home', callback_data='start'),
-                InlineKeyboardButton('🔐 Close', callback_data='close_data')
-            ]
-        ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HLP_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup
-        )
+
         
     elif query.data == "about":
         buttons = [
