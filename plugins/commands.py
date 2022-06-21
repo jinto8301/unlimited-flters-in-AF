@@ -35,21 +35,20 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-        if message.from_user.id in ADMINS:
-            buttons = [
+             fmsg == await message.reply_sticker(
+            'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
+            reply_markup=InlineKeyboardMarkup(
                 [
-                    InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
+                [
+                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
                 ],
                 [
-                    InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-                ]
-            ]
-            reply_markup = InlineKeyboardMarkup(buttons)
-            fmsg = await message.reply(
-                script.START_JNS_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
-                                        temp.U_NAME,
-                                        temp.B_NAME), reply_markup=reply_markup)
-            await asyncio.sleep(15)
+                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
+                    InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
+                ]]
+               )
+            )
+            await asyncio.sleep(30)
             await fmsg.delete()
             await message.delete()
             
