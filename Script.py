@@ -1,7 +1,9 @@
 class script(object):
     START_JNS_TXT = """Hello {},
 my name is <a href=https://t.me/{}>{}</a>
-i'm simple manual filter bot with some Features 🤩""" 
+i'm simple manual filter bot with some Features 🤩
+/settings to change autodelete time & turn ON or OFF welcome message
+""" 
     HELP_JNS_TXT = """Checkout my featues""" 
     ABOUT_JNS_TXT = """✯ MY NAME: {}
 ✯ CREATOR: <a href=https://t.me/JNS_BOTS>❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥</a>
@@ -11,6 +13,33 @@ i'm simple manual filter bot with some Features 🤩"""
 ✯ BOT SERVER: AWS 📡
 """
     HLP_TXT = """
+ /settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
+/connect - Connect with group to manage group
+/disconnect - To disconnect groups
+/connections - To switch connected groups or To get list of connected groups
+/filter | /add - Add manual filters
+/del | /stop - To delete Manual filter
+/delall - To delete all manual filters /filters | /viewfilters 
+/filters | /viewfilters - check list of filters
+/findsticker - to find sticker  from sticker ID
+/stickerid - to find sticker ID from sticker
+/getsticker - Change sticker package
+/telegraph - Image to telegraph link (reply to image)
+/speech - Text to voice (reply to text)
+/tr - Translate text from one lang. to another
+/info - To get user info
+/ban - ban users
+/unban - unban users
+/mute - mute users
+/unmute - unmute users
+/tmute - mute users for xx time
+/tban - ban users for xx time
+/leave - leave from working group (Admin only)
+/chats - To get list of working group (Admin only)
+/enable - Re-enable group (Admin only)
+/disable - ban group (Admin only)
+/broadcast - Send broadcast to users (Admin only)
+/gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)
     
     """    
     
