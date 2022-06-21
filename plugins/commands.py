@@ -50,10 +50,24 @@ async def start(client, message):
                 ]]
             )
         )
+        if message.from_user.id in ADMINS:
+            buttons = [
+                [
+                    InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+                ],
+                [
+                    InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                ]
+            ]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            fmsg = await message.reply(
+                script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
+                                        temp.U_NAME,
+                                        temp.B_NAME), reply_markup=reply_markup)
 
-        await asyncio.sleep(20)
-        await fmsg.delete()
-        await message.delete()
+            await asyncio.sleep(20)
+            await fmsg.delete()
+            await message.delete()
             
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
             if not await db.get_chat(message.chat.id):
