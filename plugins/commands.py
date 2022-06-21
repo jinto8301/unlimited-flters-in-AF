@@ -529,47 +529,43 @@ def send_help(client, chat_id, text, keyboard=None):
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
-    try:
-        userid = message.from_user.id if message.from_user else None
-        if not userid:
-            return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
-        chat_type = message.chat.type
+    userid = message.from_user.id if message.from_user else None
+    if not userid:
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
+    chat_type = message.chat.type
 
-        if chat_type == enums.ChatType.PRIVATE:
-            grpid = await active_connection(str(userid))
-            if grpid is not None:
-                grp_id = grpid
-                try:
-                    chat = await client.get_chat(grpid)
-                    title = chat.title
-                except:
-                    await message.reply_text("Make sure I'm present in your group!!", quote=True)
-                    return
-            else:
-                await message.reply_text("I'm not connected to any groups!", quote=True)
+    if chat_type == "private":
+        grpid = await active_connection(str(userid))
+        if grpid is not None:
+            grp_id = grpid
+            try:
+                chat = await client.get_chat(grpid)
+                title = chat.title
+            except:
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
-
-        elif chat_type.name in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-            grp_id = message.chat.id
-            title = message.chat.title
-
         else:
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
-        st = await client.get_chat_member(grp_id, userid)
-        if (
-                st.status != enums.ChatMemberStatus.ADMINISTRATOR
-                and st.status != enums.ChatMemberStatus.OWNER
-                and str(userid) not in ADMINS
-        ):
-            return
+    elif chat_type in ["group", "supergroup"]:
+        grp_id = message.chat.id
+        title = message.chat.title
 
-        if not await sett_db.is_settings_exist(str(grp_id)):
-            await sett_db.add_settings(str(grp_id), True, 120)
+    else:
+        return
 
-        settings = await sett_db.get_settings(str(grp_id))
+    st = await client.get_chat_member(grp_id, userid)
+    if (
+            st.status != "administrator"
+            and st.status != "creator"
+            and str(userid) not in ADMINS
+    ):
+        return
 
-        if settings is not None:
+    settings = await get_settings(grp_id)
+
+    if settings is not None:
             buttons = [
                 [
                     InlineKeyboardButton('Fɪʟᴛᴇʀ Bᴜᴛᴛᴏɴ',
