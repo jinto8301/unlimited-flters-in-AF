@@ -742,7 +742,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
                                         temp.U_NAME,temp.B_NAME), 
-            reply_markup=reply_markup)
+            reply_markup=reply_markup
+        )
         
     elif query.data == "help":
         buttons = [
