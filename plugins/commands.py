@@ -45,7 +45,7 @@ async def start(client, message):
                 ]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply(
+            fmsg = await message.reply(
                 script.START_JNS_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
                                         temp.U_NAME,
                                         temp.B_NAME), reply_markup=reply_markup)
