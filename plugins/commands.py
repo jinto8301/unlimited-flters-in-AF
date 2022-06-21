@@ -35,22 +35,23 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
+        if message.from_user.id in ADMINS:
         fmsg1 = await message.reply_sticker(
             'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
             reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                [
+                [
+                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
                 ],
                 [
-                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
+                    InlineKeyboardButton('🎈JNS TEAM🎈', callback_data='about')
                 ],
                 [
-                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
                     InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
                 ]]
             )
         )
-        if message.from_user.id in ADMINS:
+
             buttons = [
                 [
                     InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
