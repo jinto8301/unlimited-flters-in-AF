@@ -4,13 +4,15 @@ my name is <a href=https://t.me/{}>{}</a>
 i'm simple manual filter bot with some Features 🤩""" 
     HELP_JNS_TXT = """Checkout my featues""" 
     ABOUT_JNS_TXT = """✯ MY NAME: {}
-✯ CREATOR: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
+✯ CREATOR: <a href=https://t.me/JNS_BOTS>❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥</a>
 ✯ LIBRABY: PYROGRAM
 ✯ LANGUAGE:PYTHON 3
-✯ DATABASE: AWS
-✯ BOT SERVER: AWS
+✯ DATABASE: AWS ⛓
+✯ BOT SERVER: AWS 📡
 """
+    HLP_TXT = """
     
+    """    
     
     START_TXT = """𝙷𝙴𝙻𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂😍"""
