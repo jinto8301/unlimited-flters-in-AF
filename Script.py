@@ -17,6 +17,12 @@ i'm simple manual filter bot with some Features 🤩
 /connect - Connect with group to manage group
 /disconnect - To disconnect groups
 /connections - To switch connected groups or To get list of connected groups
+
+"""    
+
+    
+    
+    HLP_TXT2 = """
 /filter | /add - Add manual filters
 /del | /stop - To delete Manual filter
 /delall - To delete all manual filters /filters | /viewfilters 
@@ -26,12 +32,7 @@ i'm simple manual filter bot with some Features 🤩
 /getsticker - Change sticker package
 /telegraph - Image to telegraph link (reply to image)
 /speech - Text to voice (reply to text)
-/tr - Translate text from one lang. to another
-"""    
-
-    
-    
-    HLP_TXT2 = """
+/tr - Translate text from one lang. to another    
 /info - To get user info
 /ban - ban users
 /unban - unban users
