@@ -737,12 +737,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
                 InlineKeyboardButton('🔐 Close', callback_data='close_data')
             ]
-        ]
+        ]       
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup
-        )        
+        await message.reply(
+            script.HLP_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
+                                        temp.U_NAME,temp.B_NAME), 
+            reply_markup=reply_markup)
+        
     elif query.data == "help":
         buttons = [
             [
