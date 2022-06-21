@@ -27,6 +27,11 @@ i'm simple manual filter bot with some Features 🤩
 /telegraph - Image to telegraph link (reply to image)
 /speech - Text to voice (reply to text)
 /tr - Translate text from one lang. to another
+"""    
+
+    
+    
+    HLP_TXT2 = """
 /info - To get user info
 /ban - ban users
 /unban - unban users
@@ -39,7 +44,10 @@ i'm simple manual filter bot with some Features 🤩
 /enable - Re-enable group (Admin only)
 /disable - ban group (Admin only)
 /broadcast - Send broadcast to users (Admin only)
-/gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)"""    
+/gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)"""   
+    
+    
+    
     
     START_TXT = """𝙷𝙴𝙻𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂😍"""
