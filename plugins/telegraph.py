@@ -66,7 +66,7 @@ async def getmedia(client, update):
         )
         return
 
-    text = f"**Your Link :-** `https://telegra.ph{response[0]}`\n\n**Join Discussion Group:-** @UFSBotzSupport"
+    text = f"**Your Link :-** `https://telegra.ph{response[0]}`"
     reply_markup = InlineKeyboardMarkup(
         [
             [
@@ -75,7 +75,7 @@ async def getmedia(client, update):
                                      url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
             ],
             [
-                InlineKeyboardButton(text="🤖 Join Updates Channel", url="https://telegram.me/UFSBotz")
+                InlineKeyboardButton(text="🤖 Join Updates Channel", url="https://telegram.me/jns_bots")
             ]
         ]
     )
