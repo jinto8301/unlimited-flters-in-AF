@@ -229,8 +229,10 @@ async def deletefilter(client, message):
         cmd, text = message.text.split(" ", 1)
     except:
         await message.reply_text(
+            "<b>FOR MANUAL FILTERS</n>\n"
             "<i>Mention the filtername which you wanna delete!</i>\n\n"
             "<code>/del filtername</code>\n\n"
+            "<code>/stop filtername</code>\n\n"
             "Use /viewfilters to view all available filters",
             quote=True
         )
