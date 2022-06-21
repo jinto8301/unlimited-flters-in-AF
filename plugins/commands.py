@@ -40,10 +40,10 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                 [
-                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
+                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help1')
                 ],
                 [
-                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
+                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about1'),
                     InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
                 ]]
                )
