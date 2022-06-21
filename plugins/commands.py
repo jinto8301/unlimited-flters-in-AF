@@ -35,22 +35,25 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-            fmsg == await message.reply_sticker(
-                'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                    [
-                        InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help1')
-                    ],
-                    [
-                        InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about1'),
-                        InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
-                    ]]
-                    )
-                )
-            await asyncio.sleep(30)
-            await fmsg.delete()
-            await message.delete()
+        fmsg = await message.reply_sticker(
+            'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
+            reply_markup=InlineKeyboardMarkup(
+                [[
+                    InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],
+                [
+                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
+                ],
+                [
+                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
+                    InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
+                ]]
+            )
+        )
+
+        await asyncio.sleep(20)
+        await fmsg.delete()
+        await message.delete()
             
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
             if not await db.get_chat(message.chat.id):
