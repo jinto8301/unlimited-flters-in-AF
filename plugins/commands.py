@@ -38,7 +38,7 @@ async def start(client, message):
         if message.from_user.id in ADMINS:
             buttons = [
                 [
-                    InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+                    InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
                 ],
                 [
                     InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -63,7 +63,7 @@ async def start(client, message):
             return
         else:
             btn = [[
-                InlineKeyboardButton("⭕️ᴘᴍ ᴍᴇ ⭕️", url="https://t.me/testufsbot")
+                InlineKeyboardButton("⭕️ᴘᴍ ᴍᴇ ⭕️", url="https://t.me/jintons")
             ]]
             message.reply("Goto My PM, Then Click Start.. Here You Are Restricted By Admins...", reply_markup=btn)
             return
@@ -74,7 +74,7 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/EvaMariaUpdates')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
         ], [
             InlineKeyboardButton('ℹ️Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -116,7 +116,7 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
         ], [
             InlineKeyboardButton('ℹ️Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -185,10 +185,7 @@ async def start(client, message):
                     )
                 else:
                     buttons = [[
-                        InlineKeyboardButton('🎭 Nᴇᴡ Uᴘᴅᴀᴛᴇs', url="https://t.me/UFSFilmUpdate"),
-                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url="https://t.me/UniversalFilmStudio")
-                    ], [
-                        InlineKeyboardButton('⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜', url='https://t.me/+uuLR9YwyRjg0ODQ0')
+                        InlineKeyboardButton('JNS', url='https://t.me/JNS_BOTS')
                     ]]
                     reply_markup = InlineKeyboardMarkup(buttons)
 
@@ -202,15 +199,15 @@ async def start(client, message):
                         #     [
                         #         [
                         #             InlineKeyboardButton(
-                        #                 '🎭 Nᴇᴡ \nUᴘᴅᴀᴛᴇs', url="https://t.me/UFSFilmUpdate"
+                        #                 '🎭 Nᴇᴡ \nUᴘᴅᴀᴛᴇs', url="https://t.me/JNS_BOTS"
                         #             ),
                         #             InlineKeyboardButton(
-                        #                 '🎭 ᴍᴏᴠɪᴇs', url="https://t.me/UniversalFilmStudio"
+                        #                 '🎭 ᴍᴏᴠɪᴇs', url="https://t.me/JNS_MOVIES"
                         #             )
                         #         ],
                         #         [
                         #             InlineKeyboardButton(
-                        #                 '⭕️ ᴘᴍ ᴍᴇ ⭕️', url="https://t.me/UFSChatBot"
+                        #                 '⭕️ ᴘᴍ ᴍᴇ ⭕️', url="https://t.me/JINTONS"
                         #             )
                         #         ]
                         #     ]
@@ -220,7 +217,7 @@ async def start(client, message):
                 await sts.edit("FAILED")
                 return await client.send_message(LOG_CHANNEL, f"{str(err)}")
             await asyncio.sleep(0.5)
-        return await message.reply(f"<b><a href='https://t.me/UniversalFilmStudio'>Thank For Using Me...</a></b>")
+        return await message.reply(f"<b><a href='https://t.me/JNS_BOTS'>Thank For Using Me...</a></b>")
 
     # if unique_id:
     #     temp_msg = await message.reply("Please wait...")
@@ -280,10 +277,10 @@ async def start(client, message):
     f_caption = f_caption + f"\n\n{f_sub_caption}"
     try:
         buttons = [[
-            InlineKeyboardButton('🎭 Nᴇᴡ Uᴘᴅᴀᴛᴇs', url="https://t.me/UFSFilmUpdate"),
-            InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url="https://t.me/UniversalFilmStudio")
+            InlineKeyboardButton('🎭 Nᴇᴡ Uᴘᴅᴀᴛᴇs', url="https://t.me/JNS_BOTS"),
+            InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url="https://t.me/JNS_MOVIES")
         ], [
-            InlineKeyboardButton('⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜', url='https://t.me/+uuLR9YwyRjg0ODQ0')
+            InlineKeyboardButton('⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜', url='https://t.me/OTT_NEW')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_cached_media(
@@ -371,111 +368,10 @@ async def channel_info(bot, message):
         os.remove(file)
 
 
-@Client.on_message(filters.command('logs') & filters.user(ADMINS))
-async def log_file(bot, message):
-    """Send log file"""
-    try:
-        await message.reply_document('TelegramBot.log')
-    except Exception as e:
-        await message.reply(str(e))
 
 
-@Client.on_message(filters.command('delete') & filters.user(ADMINS))
-async def delete(bot, message):
-    """Delete file from database"""
-    reply = message.reply_to_message
-    if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
-    else:
-        await message.reply('Reply to file with /delete which you want to delete', quote=True)
-        return
-
-    for file_type in ("document", "video", "audio"):
-        media = getattr(reply, file_type, None)
-        if media is not None:
-            break
-    else:
-        await msg.edit('This Is Not Supported File Format')
-        await asyncio.sleep(2)
-        await msg.delete()
-        await message.delete()
-        return
-
-    file_id, file_ref = unpack_new_file_id(media.file_id)
-
-    result = await Media.collection.delete_one({
-        '_id': file_id,
-    })
-    if result.deleted_count:
-        await msg.edit('File Is Successfully Deleted From Database')
-        await asyncio.sleep(2)
-        await msg.delete()
-        await reply.delete()
-        await message.delete()
-    else:
-        file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
-        result = await Media.collection.delete_one({
-            'file_name': file_name,
-            'file_size': media.file_size,
-            'mime_type': media.mime_type
-        })
-        if result.deleted_count:
-            await msg.edit('File Is Successfully Deleted From Database')
-            await asyncio.sleep(2)
-            await msg.delete()
-            await reply.delete()
-            await message.delete()
-        else:
-            # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
-            # have original file name.
-            result = await Media.collection.delete_one({
-                'file_name': media.file_name,
-                'file_size': media.file_size,
-                'mime_type': media.mime_type
-            })
-            if result.deleted_count:
-                await msg.edit('File Is Successfully Deleted From Database')
-                await asyncio.sleep(2)
-                await msg.delete()
-                await reply.delete()
-                await message.delete()
-            else:
-                await msg.edit('File Not Found In Database')
-                await asyncio.sleep(2)
-                await msg.delete()
-                await message.delete()
 
 
-@Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
-async def delete_all_index(bot, message):
-    await message.reply_text(
-        'This will delete all indexed files.\nDo you want to continue??',
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="YES", callback_data="autofilter_delete"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        text="CANCEL", callback_data="close_data"
-                    )
-                ],
-            ]
-        ),
-        quote=True,
-    )
-
-
-@Client.on_callback_query(filters.regex(r'^autofilter_delete'))
-async def delete_all_index_confirm(bot, message):
-    await Media.collection.drop()
-    await message.answer()
-    await message.message.edit('Successfully Deleted All The Indexed Files.')
-
-
-# Update
 
 @Client.on_message(filters.command("update") & filters.user(ADMINS))
 async def update_restart(bot, message):
@@ -506,28 +402,6 @@ async def update_restart(bot, message):
 #         "**Updated with default branch, restarting now.**")
 #     os.execvp(sys.executable, [sys.executable, "main.py"])
 
-
-@Bot.on_message(filters.command("bat"))
-async def start111(client: Client, message):
-    try:
-        answer = await client.ask(message.chat.id, '*Send me your name:*')
-        await client.send_message(message.chat.id, f'Your name is: ')
-    except Exception as err:
-        await client.send_message(message.chat.id, f'Error is: {str(err)}')
-
-
-async def restart(message):
-    if message:
-        await start_restart_stage(message.chat.id, message.id)
-    os.execvp(sys.executable, [sys.executable, "main.py"])
-
-
-def send_help(client, chat_id, text, keyboard=None):
-    if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
-    client.send_message(chat_id=chat_id,
-                        text=text,
-                        reply_markup=keyboard)
 
 
 @Client.on_message(filters.command('settings') & filters.private)
@@ -575,36 +449,6 @@ async def settings(client, message):
 
         if settings is not None:
             buttons = [
-                [
-                    InlineKeyboardButton('Fɪʟᴛᴇʀ Bᴜᴛᴛᴏɴ',
-                                         callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}#{settings["delete_time"]}'),
-                    InlineKeyboardButton('Sɪɴɢʟᴇ' if settings["button"] else 'Dᴏᴜʙʟᴇ',
-                                         callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}#{settings["delete_time"]}')
-                ],
-                [
-                    InlineKeyboardButton('Bᴏᴛ PM',
-                                         callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}#{settings["delete_time"]}'),
-                    InlineKeyboardButton('✅ Yᴇs' if settings["botpm"] else '❌ Nᴏ',
-                                         callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}#{settings["delete_time"]}')
-                ],
-                [
-                    InlineKeyboardButton('Fɪʟᴇ Sᴇᴄᴜʀᴇ',
-                                         callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}#{settings["delete_time"]}'),
-                    InlineKeyboardButton('✅ Yᴇs' if settings["file_secure"] else '❌ Nᴏ',
-                                         callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}#{settings["delete_time"]}')
-                ],
-                [
-                    InlineKeyboardButton('Iᴍᴅʙ',
-                                         callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}#{settings["delete_time"]}'),
-                    InlineKeyboardButton('✅ Yᴇs' if settings["imdb"] else '❌ Nᴏ',
-                                         callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}#{settings["delete_time"]}')
-                ],
-                [
-                    InlineKeyboardButton('Sᴘᴇʟʟ Cʜᴇᴄᴋ',
-                                         callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}#{settings["delete_time"]}'),
-                    InlineKeyboardButton('✅ Yᴇs' if settings["spell_check"] else '❌ Nᴏ',
-                                         callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}#{settings["delete_time"]}')
-                ],
                 [
                     InlineKeyboardButton('Aᴜᴛᴏ Dᴇʟᴇᴛᴇ',
                                          callback_data=f'setgs#delete#{settings["auto_delete"]}#{str(grp_id)}#{settings["delete_time"]}'),
