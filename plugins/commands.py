@@ -35,37 +35,37 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
-        fmsg = await message.reply_sticker(
-            'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
-            reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],
-                [
-                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
-                ],
-                [
-                    InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
-                    InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
-                ]]
-            )
-        )
+                fmsg = await message.reply_sticker(
+                    'CAACAgUAAxkBAAIBY2Kx01H69vjzQxHZkbVz1cQakqG9AAKSBQAC0JaxVMbMTX7Tjp4KHgQ',
+                    reply_markup=InlineKeyboardMarkup(
+                        [[
+                            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        ],
+                        [
+                            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help')
+                        ],
+                        [
+                            InlineKeyboardButton('🎈ᴀʙᴏᴜᴛ', callback_data='about'),
+                            InlineKeyboardButton('ᴄʟᴏsᴇ🧨', callback_data='close')
+                        ]]
+                    )
+                )
 
-        await asyncio.sleep(20)
-        await fmsg.delete()
-        await message.delete()
+                await asyncio.sleep(20)
+                await fmsg.delete()
+                await message.delete()
             
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
-        if not await db.get_chat(message.chat.id):
+            if not await db.get_chat(message.chat.id):
                 total = await client.get_chat_members_count(message.chat.id)
                 await client.send_message(LOG_CHANNEL,
                                           script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total,
                                                                    "Unknown"))
                 await db.add_chat(message.chat.id, message.chat.title)
-        return
+            return
         else:
             btn = [[
-                InlineKeyboardButton("⭕️ᴘᴍ ᴍᴇ ⭕️", url="https://t.me/jintons")
+                InlineKeyboardButton("⭕️ᴘᴍ ᴍᴇ ⭕️", url="https://t.me/testufsbot")
             ]]
             message.reply("Goto My PM, Then Click Start.. Here You Are Restricted By Admins...", reply_markup=btn)
             return
