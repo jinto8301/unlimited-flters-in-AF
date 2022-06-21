@@ -45,11 +45,14 @@ async def start(client, message):
                 ]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply(
+            fmsg = await message.reply(
                 script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
                                         temp.U_NAME,
                                         temp.B_NAME), reply_markup=reply_markup)
-            await asyncio.sleep(2)
+            await asyncio.sleep(15)
+            await fmsg.delete()
+            await message.delete()
+            
             # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
             if not await db.get_chat(message.chat.id):
                 total = await client.get_chat_members_count(message.chat.id)
