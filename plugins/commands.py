@@ -35,6 +35,7 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)    # & ~filters.edited
 async def start(client, message):
     if message.chat.type.name in ['GROUP', 'SUPERGROUP']:
+        if message.from_user.id in ADMINS:        
             buttons = [
                 [
                     InlineKeyboardButton('🤖 Updates', url='https://t.me/JNS_BOTS')
