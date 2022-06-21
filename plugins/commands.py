@@ -46,7 +46,7 @@ async def start(client, message):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             fmsg = await message.reply(
-                script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
+                script.START_JNS_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
                                         temp.U_NAME,
                                         temp.B_NAME), reply_markup=reply_markup)
             await asyncio.sleep(15)
@@ -82,7 +82,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=script.START_JNS_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
         return
@@ -124,7 +124,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=script.START_JNS_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
         return
