@@ -182,7 +182,7 @@ async def get_all(client, message):
     )
 
 
-@Client.on_message(filters.command('del') & filters.incoming)
+@Client.on_message(filters.command(['del', 'stop']) & filters.incoming)
 async def deletefilter(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -217,7 +217,7 @@ async def deletefilter(client, message):
                                      [
                                          [
                                              InlineKeyboardButton(
-                                                 '⭕️ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ⭕️', url="https://t.me/UFSChatBot"
+                                                 '⭕️ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ⭕️', url="https://t.me/jintons"
                                              )
                                          ]
                                      ]
