@@ -748,7 +748,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [
             [
-                InlineKeyboardButton('📍Features📍', callback_data='jns123')
+                InlineKeyboardButton('📍Features📍', callback_data='coct')
             ],
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
