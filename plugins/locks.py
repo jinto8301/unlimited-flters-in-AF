@@ -86,7 +86,7 @@ async def unrestr_members(bot, chat_id, members, messages=True, media=True, othe
             pass
 
 
-@Client.on_message(filters.command("locktypes") & filters.incoming)    # & ~filters.edited
+# @Client.on_message(filters.command("locktypes") & filters.incoming)    # & ~filters.edited
 async def locktypes(client, message):
     await message.reply_text("\n - ".join(["Locks: "] + list(LOCK_TYPES) + list(RESTRICTION_TYPES)), quote=True)
 
@@ -194,7 +194,7 @@ async def lock(client, message):
         return
 
 
-@Client.on_message(filters.command("unlock") & filters.private)    # & ~filters.edited
+# @Client.on_message(filters.command("unlock") & filters.private)    # & ~filters.edited
 async def unlock(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -323,7 +323,7 @@ async def build_lock_message(chat_id):
     return res
 
 
-@Client.on_message(filters.command("locks") & filters.private)    # & ~filters.edited
+# @Client.on_message(filters.command("locks") & filters.private)    # & ~filters.edited
 async def list_locks(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -366,7 +366,7 @@ async def list_locks(client, message):
         await message.reply_text(res, quote=True)
 
 
-@Client.on_message(filters.all & filters.group, group=PERM_GROUP)
+# @Client.on_message(filters.all & filters.group, group=PERM_GROUP)
 async def del_lockables(client, message):
     chat = message.chat  # type: Optional[Chat]
     # message = update.effective_message  # type: Optional[Message]
