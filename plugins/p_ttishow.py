@@ -275,16 +275,20 @@ async def list_chats(bot, message):
         await message.reply_document('chats.txt', caption="List Of Chats")
 
       
-  
-@Client.on_message(filters.command('help') & filters.incoming)
-async def get_help(bot, message):
-    await message.reply_sticker(
+@Client.on_message(filters.command('help') & filters.user(ADMINS))
+async def help(bot, message):
+    raju = await message.reply('go to start menu /start to know more 😜')
+    
+    
+# @Client.on_message(filters.command('help') & filters.incoming)
+# async def get_help(bot, message):
+    #await message.reply_sticker(
             'CAACAgUAAxkBAAEBHMxileZuMfzTBQh4j-JhAvM1C5nH-QAC4QYAAiKJsFRZtKAPqtEofSQE')
-    rju2 = await rju.edit('▣▣▢▢▢▢')
-    rju3 = await rju2.edit('▣▣▣▢▢▢')
-    rju4 = await rju3.edit('▣▣▣▣▢▢')
-    rju5 = await rju4.edit('▣▣▣▣▣▢')
-    rju6 = await rju5.edit('▣▣▣▣▣▣')
-    rju6 = await rju5.edit('go to start menu /start to know more 😜')
+   # rju2 = await rju.edit('▣▣▢▢▢▢')
+   # rju3 = await rju2.edit('▣▣▣▢▢▢')
+   # rju4 = await rju3.edit('▣▣▣▣▢▢')
+  #  rju5 = await rju4.edit('▣▣▣▣▣▢')
+  #  rju6 = await rju5.edit('▣▣▣▣▣▣')
+  #  rju6 = await rju5.edit('go to start menu /start to know more 😜')
 
    
