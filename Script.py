@@ -62,7 +62,7 @@ i'm simple manual filter bot with some Features 🤩
     <b>FILTER COMMANDS</b>
 /filter | /add - Add manual filters
 /del | /stop - To delete Manual filter
-/delall - To delete all manual filters /filters | /viewfilters 
+/delall - To delete all manual filters
 /filters | /viewfilters - check list of filters    
     
     """       
