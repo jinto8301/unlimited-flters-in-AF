@@ -68,16 +68,20 @@ You can't use me in your groups without permission of my <a href=https://t.me/Ji
     """  
         
     XTA_JNS_TXT = """
-    <b>NOTE:
-✍🏻 Only can add filters in me (GF*)
+    <b>NOTE:</b>
+<b>✍🏻 Only can add filters in me (GF*)
 ✍🏻 Only admin can delete filters in me
 ✍🏻 Anyone can add me to your group - work global filters there also
 ✍🏻 I can send broadcast and global broadcast
 ✍🏻 You can customize my GF* Auto delete time by <code> /settings </code>
 ✍🏻 You can customize my wishes to new users by <code> /settings </code>
 ✍🏻 I can change any text to audio by replying to any text <code> /speech </code>
+✍🏻 I can change any images to telegraph link by replying to any image /telegraph </code> </b>
 
-   </b> """    
+Oh shit.. i don't have time to explain all my features.let's check it out /help
+
+*global filter
+ """    
     
     
     
