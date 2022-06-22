@@ -2,6 +2,12 @@ class script(object):
     START_JNS_TXT = """Hello {},
 my name is <a href=https://t.me/{}>{}</a>
 i'm simple manual filter bot with some Features 🤩
+
+/settings to change autodelete time & Turn ON or OFF welcome message
+""" 
+    START_JNS1_TXT = """Hello {},
+my name is <a href=https://t.me/{}>{}</a>
+i'm simple manual filter bot with some Features 🤩
 You can't use me in your groups without permission of my <a href=https://t.me/Jintons>Boss🔥</a>
 
 /settings to change autodelete time & Turn ON or OFF welcome message
