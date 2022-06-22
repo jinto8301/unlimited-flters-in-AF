@@ -274,11 +274,10 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-        
-        
-       
+      
+  
 @Client.on_message(filters.command('help') & filters.incoming)
-async def get_ststs(bot, message):
+async def get_help(bot, message):
     await message.reply_sticker(
             'CAACAgUAAxkBAAEBHMxileZuMfzTBQh4j-JhAvM1C5nH-QAC4QYAAiKJsFRZtKAPqtEofSQE')
     rju2 = await rju.edit('▣▣▢▢▢▢')
