@@ -731,24 +731,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.START_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
-    elif query.data == "extraaaa":
-        buttons = [
-            [
-                InlineKeyboardButton('🏠 Home', callback_data='start'),
-                InlineKeyboardButton('🔐 Close', callback_data='close_data')
-            ]
-        ]       
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SOURCE_TXT.format(message.from_user.mention if message.from_user else message.chat.title,
-                                        temp.U_NAME,temp.B_NAME), 
-            reply_markup=reply_markup
-        )
         
     elif query.data == "help":
         buttons = [
             [
-                InlineKeyboardButton('📍Features📍', callback_data='extraaaa')
+                InlineKeyboardButton('📍Features📍', callback_data='extra1')
             ],
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
@@ -763,28 +750,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
-                   # buttons = [
-        #     [
-        #         InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-        #         InlineKeyboardButton('Auto Filter', callback_data='autofilter')
-        #     ],
-        #     [
-        #         InlineKeyboardButton('Connection', callback_data='coct'),
-        #         InlineKeyboardButton('Extra Mods', callback_data='extra')
-        #     ],
-        #     [
-        #         InlineKeyboardButton('🏠 Home', callback_data='start'),
-        #         InlineKeyboardButton('🔮 Status', callback_data='stats')
-        #     ]
-        # ]
-        # reply_markup = InlineKeyboardMarkup(buttons)
-        # await query.message.edit_text(
-        #     text=script.HELP_TXT.format(query.from_user.mention),
-        #     reply_markup=reply_markup
-        # )
-        
-
-        
+     
     elif query.data == "about":
         buttons = [
             [
@@ -814,18 +780,45 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.SOURCE_TXT,
             reply_markup=reply_markup
         )
-    elif query.data == "manuelfilter":
+    elif query.data == "extra1":
         buttons = [
             [
-                InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
-                InlineKeyboardButton('⏹️ Buttons', callback_data='button')
-            ]
+                InlineKeyboardButton('Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter', callback_data='button'),
+                InlineKeyboardButton('extra', callback_data='button')
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.MANUELFILTER_TXT,
             reply_markup=reply_markup
         )
+        
+    elif query.data == "adminc":
+        buttons = [
+            [
+                InlineKeyboardButton('Admin', callback_data='help'),
+                InlineKeyboardButton('Filter', callback_data='button'),
+                InlineKeyboardButton('extra', callback_data='button')
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('😊 About', callback_data='about')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        )        
+        
+        
+        
+        
     elif query.data == "button":
         buttons = [
             [
