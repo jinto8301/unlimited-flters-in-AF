@@ -283,7 +283,7 @@ async def help(bot, message):
 # @Client.on_message(filters.command('help') & filters.incoming)
 # async def get_help(bot, message):
     #await message.reply_sticker(
-            'CAACAgUAAxkBAAEBHMxileZuMfzTBQh4j-JhAvM1C5nH-QAC4QYAAiKJsFRZtKAPqtEofSQE')
+     #  'CAACAgUAAxkBAAEBHMxileZuMfzTBQh4j-JhAvM1C5nH-QAC4QYAAiKJsFRZtKAPqtEofSQE')
    # rju2 = await rju.edit('▣▣▢▢▢▢')
    # rju3 = await rju2.edit('▣▣▣▢▢▢')
    # rju4 = await rju3.edit('▣▣▣▣▢▢')
