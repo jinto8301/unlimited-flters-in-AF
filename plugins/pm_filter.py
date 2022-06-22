@@ -769,23 +769,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.ABOUT_JNS_TXT.format(temp.B_NAME),
             reply_markup=reply_markup
         )
-    elif query.data == "source":
-        buttons = [
-            [
-                InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
-            ]
-        ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SOURCE_TXT,
-            reply_markup=reply_markup
-        )
     elif query.data == "extra1":
         buttons = [
             [
                 InlineKeyboardButton('Admin', callback_data='adminc'),
-                InlineKeyboardButton('Filter', callback_data='button'),
-                InlineKeyboardButton('extra', callback_data='button')
+                InlineKeyboardButton('Filter', callback_data='filterjns'),
+            ],
+            [
+                InlineKeyboardButton('Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -794,27 +786,89 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.MANUELFILTER_TXT,
+            text=script.FTRE_JNS_TXT,
             reply_markup=reply_markup
         )
         
     elif query.data == "adminc":
         buttons = [
             [
-                InlineKeyboardButton('Admin', callback_data='help'),
-                InlineKeyboardButton('Filter', callback_data='button'),
-                InlineKeyboardButton('extra', callback_data='button')
+                InlineKeyboardButton('Filter', callback_data='filterjns'),
+            ],
+            [
+                InlineKeyboardButton('Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
-                InlineKeyboardButton('😊 About', callback_data='about')
-            ]
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMINN_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )        
+    elif query.data == "filterjns":
+        buttons = [
+            [
+                InlineKeyboardButton('Admin', callback_data='adminc')
+            ],
+            [
+                InlineKeyboardButton('Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra', callback_data='extrajns2')                
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FILTER_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        )         
+    elif query.data == "stgsjns":
+        buttons = [
+            [
+                InlineKeyboardButton('Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter', callback_data='filterjns'),
+            ],
+            [
+                InlineKeyboardButton('extra', callback_data='extrajns2')                
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.CONNECTION_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        ) 
+    elif query.data == "extrajns2":
+        buttons = [
+            [
+                InlineKeyboardButton('Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter', callback_data='filterjns'),
+            ],
+            [
+                InlineKeyboardButton('Settings', callback_data='stgsjns')              
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.EXTRA_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        )         
+        
+        
+        
         
         
         
