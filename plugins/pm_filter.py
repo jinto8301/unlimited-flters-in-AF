@@ -732,6 +732,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup
         )
         
+    elif query.data == "helpjns":
+        buttons = [
+            [
+                InlineKeyboardButton('📍Features📍', callback_data='extra1')
+            ],
+            [
+                InlineKeyboardButton('ℹ Help', callback_data='help')
+            ],
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('😊 About', callback_data='about')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup
+        )
     elif query.data == "help":
         buttons = [
             [
@@ -749,8 +767,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
-        )
-     
+        )     
     elif query.data == "about":
         buttons = [
             [
