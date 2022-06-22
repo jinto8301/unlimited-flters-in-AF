@@ -722,7 +722,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
             ],
             [
-                InlineKeyboardButton('ℹ Help', callback_data='help'),
+                InlineKeyboardButton('ℹ Help', callback_data='helpjns'),
                 InlineKeyboardButton('😊 About', callback_data='about')
             ]
         ]
@@ -898,8 +898,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]            
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_chat_action("Typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAIFNGJSlfOErbkSeLt9SnOniU-58UUBAAKaAAPIlGQULGXh4VzvJWoeBA") 
+        await query.message.reply_chat_action("Typing")
+        m=await query.message.reply_sticker("CAACAgUAAxkBAAIFNGJSlfOErbkSeLt9SnOniU-58UUBAAKaAAPIlGQULGXh4VzvJWoeBA") 
         await asyncio.sleep(1)
         await m.delete()        
         await query.message.edit_text(
