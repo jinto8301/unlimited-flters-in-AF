@@ -43,7 +43,7 @@ i'm simple manual filter bot with some Features 🤩
 """    
 
 
-    HELP_JNS_TXT = """
+    ADMINN_JNS_TXT = """
     <b>ADMIN COMMANDS</b>
 /leave - leave from working group (Admin only)
 /chats - To get list of working group (Admin only)
