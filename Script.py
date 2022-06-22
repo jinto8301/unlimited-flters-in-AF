@@ -15,11 +15,16 @@ You can't use me in your groups without permission of my <a href=https://t.me/Ji
     HELP_JNS_TXT = """Checkout my featues""" 
     FTRE_JNS_TXT = """Checkout my featues""" 
     ABOUT_JNS_TXT = """✯ MY NAME: {}
+    
 ✯ CREATOR: <a href=https://t.me/JNS_BOTS>❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥</a>
+
 ✯ LIBRABY: PYROGRAM
+
 ✯ LANGUAGE: PYTHON 3
-✯ DATABASE: <a https://aws.amazon.com>AWS ⛓</a>
-✯ BOT SERVER: <a https://aws.amazon.com>AWS 📡</a>
+
+✯ DATABASE: <a href=https://aws.amazon.com>AWS ⛓</a>
+
+✯ BOT SERVER: <a href=https://aws.amazon.com>AWS 📡</a>
 """
     EXTRAMOD_TXT = """
 /settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
