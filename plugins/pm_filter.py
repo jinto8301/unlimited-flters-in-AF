@@ -812,7 +812,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.HELP_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.ADMINN_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )        
         
