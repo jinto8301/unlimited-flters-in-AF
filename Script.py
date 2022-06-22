@@ -42,7 +42,24 @@ i'm simple manual filter bot with some Features 🤩
 /gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)
 """    
 
-   
+
+    HELP_JNS_TXT = """
+    <b>ADMIN COMMANDS</b>
+/leave - leave from working group (Admin only)
+/chats - To get list of working group (Admin only)
+/enable - Re-enable group (Admin only)
+/disable - ban group (Admin only)
+/broadcast - Send broadcast to users (Admin only)    
+    
+    """    
+    
+    
+    
+    
+    
+    
+    
+    
     
     START_TXT = """𝙷𝙴𝙻𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂😍"""
