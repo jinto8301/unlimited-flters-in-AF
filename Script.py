@@ -60,6 +60,7 @@ i'm simple manual filter bot with some Features 🤩
     """    
     FILTER_JNS_TXT = """
     <b>FILTER COMMANDS</b>
+    <b>ADMIN ONLY</b>
 /filter | /add - Add manual filters
 /del | /stop - To delete Manual filter
 /delall - To delete all manual filters
