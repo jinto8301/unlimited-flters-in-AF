@@ -69,7 +69,7 @@ You can't use me in your groups without permission of my <a href=https://t.me/Ji
         
     XTA_JNS_TXT = """
     <b>NOTE:</b>
-<b>✍🏻 Only can add filters in me (GF*)
+<b>✍🏻 Only admin can add filters in me (GF*)
 ✍🏻 Only admin can delete filters in me
 ✍🏻 Anyone can add me to your group - work global filters there also
 ✍🏻 I can send broadcast and global broadcast
