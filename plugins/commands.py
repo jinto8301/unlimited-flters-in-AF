@@ -75,7 +75,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
         ], [
-            InlineKeyboardButton('ℹ️Help', callback_data='help'),
+            InlineKeyboardButton('ℹ️Help', callback_data='helpjns'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -116,7 +116,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
         ], [
-            InlineKeyboardButton('ℹ️Help', callback_data='help'),
+            InlineKeyboardButton('ℹ️Help', callback_data='helpjns'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
