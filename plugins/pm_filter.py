@@ -731,7 +731,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.START_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
         )
-    elif query.data == "jns123":
+    elif query.data == "extraaaa":
         buttons = [
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -748,7 +748,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [
             [
-                InlineKeyboardButton('📍Features📍', callback_data='coct')
+                InlineKeyboardButton('📍Features📍', callback_data='extraaaa')
             ],
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/jns_bots')
