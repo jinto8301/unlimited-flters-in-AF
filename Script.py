@@ -20,7 +20,7 @@ i'm simple manual filter bot with some Features 🤩
 /connections - To switch connected groups or To get list of connected groups
 /filter | /add - Add manual filters
 /del | /stop - To delete Manual filter
-/delall - To delete all manual filters /filters | /viewfilters 
+/delall - To delete all manual filters 
 /filters | /viewfilters - check list of filters
 /findsticker - to find sticker  from sticker ID
 /stickerid - to find sticker ID from sticker
