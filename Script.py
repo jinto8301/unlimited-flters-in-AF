@@ -5,6 +5,7 @@ i'm simple manual filter bot with some Features 🤩
 /settings to change autodelete time & turn ON or OFF welcome message
 """ 
     HELP_JNS_TXT = """Checkout my featues""" 
+    FTRE_JNS_TXT = """Checkout my featues""" 
     ABOUT_JNS_TXT = """✯ MY NAME: {}
 ✯ CREATOR: <a href=https://t.me/JNS_BOTS>❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥</a>
 ✯ LIBRABY: PYROGRAM
