@@ -42,9 +42,30 @@ i'm simple manual filter bot with some Features 🤩
 /gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)
 """    
 
+   
     
-    
-    HLP_TXT2 = """
+    START_TXT = """𝙷𝙴𝙻𝙾 {},
+𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂😍"""
+    HELP_STRINGS = """
+Hey Dear <b>{}</b>! My name is <b>UFS #V3.0</b>. I Am A Group Movie Bot, Here To Help You Get Around And Keep The Order In Your Groups!
+I Have Lots Of Handy Features, 
+
+<b>Helpful commands</b>:
+- /start: Starts me! You've probably already used this.
+- /help: Sends this message; I'll tell you more about myself!
+- /donate: Gives you info on how to support me and my creator.
+{}
+
+All commands can be used with the following: /
+"""
+    HELP_TXT = """𝙷𝙴𝚈 {}
+𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+
+    SOURCE_TXT = """<b>NOTE:</b>
+ /settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
+/connect - Connect with group to manage group
+/disconnect - To disconnect groups
+/connections - To switch connected groups or To get list of connected groups
 /filter | /add - Add manual filters
 /del | /stop - To delete Manual filter
 /delall - To delete all manual filters /filters | /viewfilters 
@@ -67,33 +88,7 @@ i'm simple manual filter bot with some Features 🤩
 /enable - Re-enable group (Admin only)
 /disable - ban group (Admin only)
 /broadcast - Send broadcast to users (Admin only)
-/gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)"""   
-    
-    
-    
-    
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂😍"""
-    HELP_STRINGS = """
-Hey Dear <b>{}</b>! My name is <b>UFS #V3.0</b>. I Am A Group Movie Bot, Here To Help You Get Around And Keep The Order In Your Groups!
-I Have Lots Of Handy Features, 
-
-<b>Helpful commands</b>:
-- /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
-- /donate: Gives you info on how to support me and my creator.
-{}
-
-All commands can be used with the following: /
-"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-
-    SOURCE_TXT = """<b>NOTE:</b>
-- Eva Maria is a open source project. 
-- Source - https://github.com/EvamariaTG/EvaMaria  
-
-<b>DEVS:</b>
+/gpbroadcast | /gbbroadcast - to send broadcast to all working groups (Admin only)
 - <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
