@@ -2,6 +2,8 @@ class script(object):
     START_JNS_TXT = """Hello {},
 my name is <a href=https://t.me/{}>{}</a>
 i'm simple manual filter bot with some Features 🤩
+You can't use me in your groups without permission of my <a href=https://t.me/Jintons>Boss🔥</a>
+
 /settings to change autodelete time & Turn ON or OFF welcome message
 """ 
     HELP_JNS_TXT = """Checkout my featues""" 
@@ -9,12 +11,12 @@ i'm simple manual filter bot with some Features 🤩
     ABOUT_JNS_TXT = """✯ MY NAME: {}
 ✯ CREATOR: <a href=https://t.me/JNS_BOTS>❤️‍🔥ＪƝ⟆ ᗷ〇Ƭ⟆❤️‍🔥</a>
 ✯ LIBRABY: PYROGRAM
-✯ LANGUAGE:PYTHON 3
-✯ DATABASE: AWS ⛓
-✯ BOT SERVER: AWS 📡
+✯ LANGUAGE: PYTHON 3
+✯ DATABASE: <a https://aws.amazon.com>AWS ⛓</a>
+✯ BOT SERVER: <a https://aws.amazon.com>AWS 📡</a>
 """
     EXTRAMOD_TXT = """
- /settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
+/settings - Change autodelete time or OFF &  also turn ON or OFF welcome message ( group admin can only to it in PM)
 /connect - Connect with group to manage group
 /disconnect - To disconnect groups
 /connections - To switch connected groups or To get list of connected groups
@@ -83,7 +85,6 @@ i'm simple manual filter bot with some Features 🤩
 /speech - Text to voice (reply to text)
 /tr - Translate text from one lang. to another    
 /info - To get user info    
-    
     """  
     
     
