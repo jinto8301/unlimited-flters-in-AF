@@ -772,12 +772,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "extra1":
         buttons = [
             [
-                InlineKeyboardButton('Admin', callback_data='adminc'),
-                InlineKeyboardButton('Filter', callback_data='filterjns'),
+                InlineKeyboardButton('✨Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter🤾🏻‍♂️', callback_data='filterjns'),
             ],
             [
-                InlineKeyboardButton('Settings', callback_data='stgsjns'),
-                InlineKeyboardButton('extra', callback_data='extrajns2')                
+                InlineKeyboardButton('🤼‍♂️ Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra🤹🏻', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -793,11 +793,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "adminc":
         buttons = [
             [
-                InlineKeyboardButton('Filter', callback_data='filterjns'),
+                InlineKeyboardButton('🟢Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter🤾🏻‍♂️', callback_data='filterjns'),
             ],
             [
-                InlineKeyboardButton('Settings', callback_data='stgsjns'),
-                InlineKeyboardButton('extra', callback_data='extrajns2')                
+                InlineKeyboardButton('🤼‍♂️ Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra🤹🏻', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -812,11 +813,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "filterjns":
         buttons = [
             [
-                InlineKeyboardButton('Admin', callback_data='adminc')
+                InlineKeyboardButton('✨Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter🟢', callback_data='filterjns'),
             ],
             [
-                InlineKeyboardButton('Settings', callback_data='stgsjns'),
-                InlineKeyboardButton('extra', callback_data='extrajns2')                
+                InlineKeyboardButton('🤼‍♂️ Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra🤹🏻', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -831,11 +833,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stgsjns":
         buttons = [
             [
-                InlineKeyboardButton('Admin', callback_data='adminc'),
-                InlineKeyboardButton('Filter', callback_data='filterjns'),
+                InlineKeyboardButton('✨Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter🤾🏻‍♂️', callback_data='filterjns'),
             ],
             [
-                InlineKeyboardButton('extra', callback_data='extrajns2')                
+                InlineKeyboardButton('🟢Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra🤹🏻', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -850,11 +853,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "extrajns2":
         buttons = [
             [
-                InlineKeyboardButton('Admin', callback_data='adminc'),
-                InlineKeyboardButton('Filter', callback_data='filterjns'),
+                InlineKeyboardButton('✨Admin', callback_data='adminc'),
+                InlineKeyboardButton('Filter🤾🏻‍♂️', callback_data='filterjns'),
             ],
             [
-                InlineKeyboardButton('Settings', callback_data='stgsjns')              
+                InlineKeyboardButton('🤼‍♂️ Settings', callback_data='stgsjns'),
+                InlineKeyboardButton('extra 🟢', callback_data='extrajns2')                
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
