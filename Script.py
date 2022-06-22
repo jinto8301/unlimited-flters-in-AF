@@ -78,9 +78,9 @@ You can't use me in your groups without permission of my <a href=https://t.me/Ji
 ✍🏻 I can change any text to audio by replying to any text <code> /speech </code>
 ✍🏻 I can change any images to telegraph link by replying to any image <code> /telegraph </code> </b>
 
-Oh shit.. i don't have time to explain all my features.let's check it out /help
+Oh shit.. i don't have time to explain all my features....let's check it out /start
 
-It is not right to boast off about myself..now it is ur chance to say about my features 🤪
+It is not right to boast off about myself..now it is your chance to check all my features 🤪
 
 *global filter
  """    
