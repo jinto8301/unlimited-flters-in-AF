@@ -97,9 +97,18 @@ You can't use me in your groups without permission of my <a href=https://t.me/Ji
 /tr - Translate text from one lang. to another    
 /info - To get user info    
     """  
-    
-    
-    
+        
+    XTA_JNS_TXT = """
+    <b>NOTE</b>
+✍🏻 Only can add filters in me (GF*)
+✍🏻 Only admin can delete filters in me
+✍🏻 Anyone can add me to your group - work global filters there also
+✍🏻 I can send broadcast and global broadcast
+✍🏻 You can customize my GF* Auto delete time by <code> /settings </code>
+✍🏻 You can customize my wishes to new users by <code> /settings </code>
+✍🏻 I can change any text to audio by replying to any text <code> /speech </code>
+
+    """    
     
     
     
