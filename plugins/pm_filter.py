@@ -735,10 +735,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "helpjns":
         buttons = [
             [
-                InlineKeyboardButton('📍Features📍', callback_data='extra1')
+                InlineKeyboardButton('ℹ Help', callback_data='help')                
+                
             ],
             [
-                InlineKeyboardButton('ℹ Help', callback_data='help')
+                InlineKeyboardButton('🔖NOTE🔖', callback_data='extra11')
             ],
             [
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -886,8 +887,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.EXTRA_JNS_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup
-        )         
+        )
         
+        
+    elif query.data == "extra11":
+        buttons = [
+            [
+                InlineKeyboardButton('🏠 Home', callback_data='start'),
+                InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            ]            
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.XTA_JNS_TXT,
+            reply_markup=reply_markup
+        )        
         
         
         
